@@ -9,11 +9,11 @@
 > npm run dev
 
 ## Приложение написано с использованием:
-> React Native. /n
-> Redux-toolkit. /n
-> RTK-query. /n
-> Redux-thunk. /n
-> styled-component. /n
-> json-server. /n
-> json-servr-auth. /n
+* React Native.
+* Redux-toolkit.
+* RTK-query.
+* Redux-thunk.
+* styled-component.
+* json-server.
+* json-servr-auth.
 
