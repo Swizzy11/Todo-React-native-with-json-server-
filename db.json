@@ -1,0 +1,48 @@
+{
+  "posts": [
+    {
+      "title": "Odtodky",
+      "content": "Pygffzpy",
+      "userID": 5,
+      "id": 2,
+      "updateTitle": "123hhdd",
+      "updateContent": "Lhxluflulufpufpydlyfu pdydyolydlsky"
+    },
+    {
+      "title": "06rtiditd",
+      "content": "Pufogotd",
+      "userID": 5,
+      "id": 3
+    },
+    {
+      "title": "858tds",
+      "content": "9ydoyd",
+      "userID": 5,
+      "id": 4
+    },
+    {
+      "title": "9dyitd",
+      "content": "Lhxlhx",
+      "userID": 5,
+      "id": 5
+    }
+  ],
+  "users": [
+    {
+      "email": "olivier@mail.com",
+      "password": "$2a$10$yza8MLfNL5NfxeqOAZcny.bHicmUKkv0rYTpfiZuOFQSFN9GhBvQi",
+      "username": "Olivier",
+      "secondname": "Monge",
+      "age": 32,
+      "id": 5
+    },
+    {
+      "email": "kotovskij.01@yandex.ru",
+      "password": "$2a$10$4ipJV.zJqOVqvlDzjvDIz.kKaUrJK3/XXsizgm1b1AT7FDumFUy3a",
+      "username": "Dmitry",
+      "secondname": "Kotovskij",
+      "posts": [],
+      "id": 6
+    }
+  ]
+}

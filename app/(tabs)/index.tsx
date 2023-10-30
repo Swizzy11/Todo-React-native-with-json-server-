@@ -1,31 +1,25 @@
-import { StyleSheet } from 'react-native';
+import { View, Platform, StatusBar } from 'react-native'
+import React, { FC } from 'react'
+import { StyleSheet } from 'react-native'
+import LoginForm from '../../components/LoginForm/LoginForm'
 
-import EditScreenInfo from '../../components/EditScreenInfo';
-import { Text, View } from '../../components/Themed';
-
-export default function TabOneScreen() {
+const Login:FC = () => {
+  
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
+      <LoginForm />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});
+    container: {
+      width: '100%',
+      height: Platform.OS === "android" ? `${100 - StatusBar.currentHeight! / 7.3}%` : `100%`,
+      marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+      alignItems: 'center',
+      justifyContent: 'center'
+    }
+  });
+
+export default Login

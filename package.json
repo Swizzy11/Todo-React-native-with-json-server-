@@ -3,8 +3,10 @@
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
-    "start": "expo start",
+    "start": "expo start ",
     "android": "expo start --android",
+    "server": "json-server --watch db.json --host 192.168.0.20  --port 5000 -m ./node_modules/json-server-auth",
+    "dev": "concurrently \"npm run start\" \"npm run server\"",
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test": "jest --watchAll"
@@ -15,6 +17,10 @@
   "dependencies": {
     "@expo/vector-icons": "^13.0.0",
     "@react-navigation/native": "^6.0.2",
+    "@reduxjs/toolkit": "^1.9.7",
+    "@types/react-redux": "^7.1.28",
+    "axios": "^1.6.0",
+    "concurrently": "^8.2.2",
     "expo": "~49.0.15",
     "expo-font": "~11.4.0",
     "expo-linking": "~5.0.2",
@@ -23,19 +29,25 @@
     "expo-status-bar": "~1.6.0",
     "expo-system-ui": "~2.4.0",
     "expo-web-browser": "~12.3.2",
-    "react": "18.2.0",
+    "react": "^18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.72.6",
     "react-native-gesture-handler": "~2.12.0",
     "react-native-safe-area-context": "4.6.3",
     "react-native-screens": "~3.22.0",
-    "react-native-web": "~0.19.6"
+    "react-native-web": "~0.19.6",
+    "react-redux": "^8.1.3",
+    "redux": "^4.2.1",
+    "redux-thunk": "^2.4.2",
+    "styled-components": "^6.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@types/react": "~18.2.14",
     "jest": "^29.2.1",
     "jest-expo": "~49.0.0",
+    "json-server": "^0.17.4",
+    "json-server-auth": "^2.1.0",
     "react-test-renderer": "18.2.0",
     "typescript": "^5.1.3"
   },
