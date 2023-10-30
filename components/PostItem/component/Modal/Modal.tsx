@@ -1,8 +1,8 @@
 import React, { FC, useState } from 'react'
 import { ButtonAddWrapper, ButtonCloseWrapper, Form, FormItem, FormTitle, ModalContainer } from './Modal.style'
-import { Textarea } from '../../../../models/Home/components/Modal/component/Input'
-import { ButtonClose, ButtonAdd } from '../../../LoginForm/component/Button'
-import { Label, Input } from '../../../LoginForm/component/Input'
+import { Textarea } from './component/Input'
+import { ButtonClose, ButtonAdd } from '../../../../models/Login/component/LoginForm/component/Button'
+import { Label, Input } from './component/Input'
 import { IPost } from '../../../../types/post'
 
 interface ModalForEditProps {

@@ -1,7 +1,7 @@
 import { View, StyleSheet } from 'react-native'
 import React, { FC } from 'react'
 import { ButtonWrapper, ImgWrapper, Img, ProfileInfoWrapper, ProfileItem, Title, UserInfo, ImgItem } from './ProfileContent.styles'
-import { useAppSelector } from '../../hooks/useAppSelector'
+import { useAppSelector } from '../../../../hooks/useAppSelector'
 import { ButtonBack } from './component/Button'
 import { router } from 'expo-router'
 

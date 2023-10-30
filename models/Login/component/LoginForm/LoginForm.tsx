@@ -3,11 +3,11 @@ import { ButtonAddWrapper, Form, FormItem, FormTitle } from './LoginForm.style'
 import { Input, Label } from './component/Input'
 import { ButtonAdd } from './component/Button'
 import { router } from 'expo-router'
-import { userAPI } from '../../service/UserService'
+import { userAPI } from '../../../../service/UserService'
 import { Text } from 'react-native'
 
 const LoginForm:FC = () => {
-    const [loginUser] = userAPI.useLoginMutation()
+    const [loginUser, {status}] = userAPI.useLoginMutation()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [emailError, setEmailError] = useState('')
@@ -24,8 +24,11 @@ const LoginForm:FC = () => {
                     password: password,
                 }     
             )
-            .then(() => router.push('/home'))
-            .catch(() => setPasswordError(`Неверный логин или пароль`))
+            if(status === 'fulfilled') {
+                router.push('/home')
+            }else {
+                setPasswordError(`Неверный логин или пароль`)
+            }
         }else {
             setPasswordError('Введите логин и пароль')
         }
@@ -44,7 +47,7 @@ const LoginForm:FC = () => {
                 />
             </FormItem>
             <FormItem>
-                <Text>
+                <Text style={{color: 'red'}}>
                     {emailError}
                 </Text>
             </FormItem>
@@ -58,7 +61,7 @@ const LoginForm:FC = () => {
                 />
             </FormItem>
             <FormItem>
-                <Text>
+                <Text style={{color: 'red'}}>
                     {passwordError}
                 </Text>
             </FormItem>

@@ -1,7 +1,7 @@
 import { View, Platform, StatusBar } from 'react-native'
 import React, { FC } from 'react'
 import { StyleSheet } from 'react-native'
-import LoginForm from '../../components/LoginForm/LoginForm'
+import LoginForm from '../../models/Login/component/LoginForm/LoginForm'
 
 const Login:FC = () => {
   

@@ -1,6 +1,6 @@
 import { View, Platform, StatusBar, StyleSheet } from 'react-native'
 import React, { FC } from 'react'
-import ProfileContent from '../../components/ProfileContent/ProfileContent';
+import ProfileContent from '../../models/Profile/component/ProfileContent/ProfileContent';
 
 const Profile:FC = () => {
   return (

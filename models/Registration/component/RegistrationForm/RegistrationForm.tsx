@@ -3,12 +3,12 @@ import { ButtonAddWrapper, Form, FormItem, FormTitle } from './RegistrationForm.
 import { ErrorLabel } from './component/Input'
 import { Input, Label } from './component/Input'
 import { ButtonAdd } from './component/Button'
-import { userAPI } from '../../service/UserService'
-import { IUser } from '../../types/user'
-import { IPost } from '../../types/post'
+import { userAPI } from '../../../../service/UserService'
+import { IUser } from '../../../../types/user'
+import { IPost } from '../../../../types/post'
 import { router } from 'expo-router'
 import { Text } from 'react-native'
-import { validator } from '../../utils/validator'
+import { validator } from '../../../../utils/validator'
 
 const RegistrationForm:FC = () => {
     const [email, setEmail] = useState('')

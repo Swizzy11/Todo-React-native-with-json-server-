@@ -1,6 +1,6 @@
 import { View, StyleSheet, Platform, StatusBar } from 'react-native'
 import React, { FC } from 'react'
-import RegistrationForm from '../../components/RegistrationForm/RegistrationForm'
+import RegistrationForm from '../../models/Registration/component/RegistrationForm/RegistrationForm'
 
 const Registration:FC = () => {
   return (
