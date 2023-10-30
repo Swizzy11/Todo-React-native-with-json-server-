@@ -1,6 +1,7 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
 import { IUser } from '../types/user'
 import { RootState } from '../store/store';
+import { IPv4 } from '../utils/IPv4';
 
 interface UserResponse {
     user: IUser
@@ -15,7 +16,7 @@ export interface UserRequests {
 export const userAPI = createApi({
     reducerPath: 'userAPI',
     baseQuery: fetchBaseQuery({
-        baseUrl:'http://192.168.0.20:5000',
+        baseUrl:`${IPv4}:5000`,
         prepareHeaders: (headers, { getState }) => {
 
             const token = (getState() as RootState).auth.token;

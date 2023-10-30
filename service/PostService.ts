@@ -1,9 +1,10 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
 import { IPost } from '../types/post'
+import { IPv4 } from '../utils/IPv4'
 
 export const postAPI = createApi({
     reducerPath: 'postAPI',
-    baseQuery: fetchBaseQuery({baseUrl:'http://192.168.0.20:5000'}),
+    baseQuery: fetchBaseQuery({baseUrl:`${IPv4}:5000`}),
     tagTypes: ['Post'],
     endpoints: (build) => ({
         fetchAllPosts: build.query<IPost[], number>({
