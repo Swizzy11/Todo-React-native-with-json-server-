@@ -1,4 +1,3 @@
-import { View, Text } from 'react-native'
 import React, { FC, useState } from 'react'
 import { EditHighlight, EditContainer, EditItem } from './ButtonEdit.style'
 import Modal from '../Modal/Modal'
