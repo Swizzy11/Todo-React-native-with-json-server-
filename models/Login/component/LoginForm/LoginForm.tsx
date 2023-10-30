@@ -10,12 +10,10 @@ const LoginForm:FC = () => {
     const [loginUser, {status}] = userAPI.useLoginMutation()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [emailError, setEmailError] = useState('')
-    const [passwordError, setPasswordError] = useState('')
+    const [error, setError] = useState('')
 
     const authUser = () => {
-        setEmailError('')
-        setPasswordError('')
+        setError('')
 
         if(email !== '' && password !== '') {
             loginUser(
@@ -27,10 +25,10 @@ const LoginForm:FC = () => {
             if(status === 'fulfilled') {
                 router.push('/home')
             }else {
-                setPasswordError(`Неверный логин или пароль`)
+                setError(`Неверный логин или пароль`)
             }
         }else {
-            setPasswordError('Введите логин и пароль')
+            setError('Введите логин и пароль')
         }
     }
   return (
@@ -47,11 +45,6 @@ const LoginForm:FC = () => {
                 />
             </FormItem>
             <FormItem>
-                <Text style={{color: 'red'}}>
-                    {emailError}
-                </Text>
-            </FormItem>
-            <FormItem>
                 <Label>Пароль</Label>
                 <Input 
                     value={password} 
@@ -62,7 +55,7 @@ const LoginForm:FC = () => {
             </FormItem>
             <FormItem>
                 <Text style={{color: 'red'}}>
-                    {passwordError}
+                    {error}
                 </Text>
             </FormItem>
             <FormItem>
